@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Infinity ’25 – College Fest</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #22d3ee;
+      --table: #1f2937;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 10% -10%, #0b1226, var(--bg));
+      color: var(--text);
+      line-height: 1.55;
+    }
+    header {
+      padding: 64px 24px 24px; text-align: center; position: relative; overflow: hidden;
+    }
+    .title { font-size: clamp(28px, 5vw, 48px); font-weight: 800; letter-spacing: 1px; }
+    .subtitle { color: var(--muted); margin-top: 8px; }
+    .badge { display: inline-block; margin-top: 14px; padding: 6px 10px; border-radius: 999px; background: #0ea5e9; color: white; font-weight: 600; font-size: 12px; }
+
+    main { max-width: 1100px; margin: 24px auto 80px; padding: 0 20px; }
+
+    section { background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.07); border-radius: 18px; padding: 24px; margin-top: 24px; box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    }
+    section h2 { margin: 0 0 12px; font-size: 22px; }
+    section p.lead { color: var(--muted); margin-top: 0; }
+
+    /* Schedule Table */
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; background: var(--table); border-radius: 12px; overflow: hidden; }
+    thead th { text-align: left; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; color: #a5b4fc; background: #0b1222; }
+    th, td { padding: 14px 16px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    tbody tr:hover { background: rgba(255,255,255,0.03); }
+    .pill { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+    .cat-tech { background: rgba(34,211,238,0.15); color: #67e8f9; }
+    .cat-cult { background: rgba(139,92,246,0.15); color: #c4b5fd; }
+    .cat-sport { background: rgba(34,197,94,0.15); color: #86efac; }
+
+    /* Gallery */
+    .gallery-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px; }
+    figure { grid-column: span 4; background: #0b1222; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; overflow: hidden; }
+    figure img { width: 100%; height: 230px; object-fit: cover; display: block; }
+    figcaption { padding: 10px 12px; color: var(--muted); font-size: 14px; }
+    @media (max-width: 900px) { figure { grid-column: span 6; } }
+    @media (max-width: 600px) { figure { grid-column: span 12; } }
+
+    /* Footer */
+    footer { text-align: center; color: var(--muted); padding: 40px 10px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="badge">College of Engineering</div>
+    <div class="title">Infinity ’25 – Annual Fest</div>
+    <div class="subtitle">3 days • Tech • Culture • Sports</div>
+  </header>
+
+  <main>
+    <section id="schedule">
+      <h2>Fest Schedule</h2>
+      <p class="lead">Here’s a quick look at highlighted events with dates and start times. Venue details and registration links will appear on your ID cards and the WhatsApp groups.</p>
+      <div class="table-wrap">
+        <table aria-describedby="schedule">
+          <thead>
+            <tr>
+              <th scope="col">Event</th>
+              <th scope="col">Category</th>
+              <th scope="col">Date</th>
+              <th scope="col">Start Time</th>
+              <th scope="col">Venue</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Coding Contest</td>
+              <td><span class="pill cat-tech">Tech</span></td>
+              <td>Oct 10, 2025</td>
+              <td>10:00 AM</td>
+              <td>Lab Block – CS-301</td>
+            </tr>
+            <tr>
+              <td>Hackathon (24h)</td>
+              <td><span class="pill cat-tech">Tech</span></td>
+              <td>Oct 10–11, 2025</td>
+              <td>12:00 PM</td>
+              <td>Innovation Hub</td>
+            </tr>
+            <tr>
+              <td>Cultural Night</td>
+              <td><span class="pill cat-cult">Cultural</span></td>
+              <td>Oct 11, 2025</td>
+              <td>6:30 PM</td>
+              <td>Open Air Theatre</td>
+            </tr>
+            <tr>
+              <td>Battle of Bands</td>
+              <td><span class="pill cat-cult">Cultural</span></td>
+              <td>Oct 12, 2025</td>
+              <td>7:30 PM</td>
+              <td>Main Stage</td>
+            </tr>
+            <tr>
+              <td>5‑a‑side Football Finals</td>
+              <td><span class="pill cat-sport">Sports</span></td>
+              <td>Oct 12, 2025</td>
+              <td>4:00 PM</td>
+              <td>North Ground</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Visual Gallery</h2>
+      <p class="lead">Moments from previous editions. </code>.</p>
+      <div class="gallery-grid">
+        <figure>
+          <img src="chrowd.jpg" alt="Students cheering in front of the main stage at night" />
+          <figcaption>Main stage crowd – Cultural Night ’24</figcaption>
+        </figure>
+        <figure>
+          <img src="Hackathon.jpg" alt="Teams working on laptops during a hackathon in a brightly lit hall" />
+          <figcaption>Hackathon – Innovation Hub</figcaption>
+        </figure>
+        <figure>
+          <img src="football.jpg" alt="A player taking a shot on goal during the football finals under floodlights" />
+          <figcaption>Football Finals – North Ground</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Infinity Fest Committee · <a href="#schedule">Schedule</a> · <a href="#gallery">Gallery</a>
+  </footer>
+</body>
+</html>
